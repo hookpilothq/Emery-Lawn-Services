@@ -1,4 +1,6 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 import appCss from "../styles.css?url";
 
@@ -29,21 +31,17 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
-      { property: "og:type", content: "website" },
+      { title: "Emery Lawn Services — Hardscaping & Landscaping" },
+      { name: "description", content: "Professional hardscaping and landscaping services. Call Emery Lawn Services at (908) 894-9903 for a free estimate." },
+      { name: "author", content: "Emery Lawn Services" },
+      { property: "og:title", content: "Emery Lawn Services — Hardscaping & Landscaping" },
+      { name: "twitter:title", content: "Emery Lawn Services — Hardscaping & Landscaping" },
+      { property: "og:description", content: "Professional hardscaping and landscaping services. Call (908) 894-9903 for a free estimate." },
+      { name: "twitter:description", content: "Professional hardscaping and landscaping services. Call (908) 894-9903 for a free estimate." },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { property: "og:type", content: "website" },
     ],
-    links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
-    ],
+    links: [{ rel: "stylesheet", href: appCss }],
   }),
   shellComponent: RootShell,
   component: RootComponent,
@@ -65,5 +63,13 @@ function RootShell({ children }: { children: React.ReactNode }) {
 }
 
 function RootComponent() {
-  return <Outlet />;
+  return (
+    <>
+      <Header />
+      <main>
+        <Outlet />
+      </main>
+      <Footer />
+    </>
+  );
 }
