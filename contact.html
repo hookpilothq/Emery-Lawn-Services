@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Emery Lawn Services</title>
+  <meta name="description" content="Contact Emery Lawn Services for a free landscaping or hardscaping estimate." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./emery.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container row topbar-inner">
+      <div class="logo">Emery Lawn Services</div>
+      <nav class="nav">
+        <a href="./index.html">Home</a>
+        <a href="./services.html">Services</a>
+        <a href="./gallery.html">Gallery</a>
+        <a href="./faq.html">FAQs</a>
+        <a href="./reviews.html">Reviews</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+      <a class="btn ghost" href="tel:9088949903">Call (908) 894-9903</a>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container contact-wrap">
+      <div class="form">
+        <h1 style="font-size:38px;margin:0 0 8px">Contact Emery Lawn Services</h1>
+        <p class="subhead">Request a free estimate and we’ll follow up with next steps.</p>
+
+        <form action="https://formspree.io/f/REPLACE_ME" method="POST">
+          <label for="name">Name</label>
+          <input id="name" name="name" required placeholder="Your name" />
+
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" required placeholder="(xxx) xxx-xxxx" />
+
+          <label for="email">Email</label>
+          <input id="email" type="email" name="email" required placeholder="you@email.com" />
+
+          <label for="service">Service Needed</label>
+          <select id="service" name="service">
+            <option>Hardscaping</option>
+            <option>Landscaping</option>
+            <option>Outdoor Features</option>
+            <option>General Estimate</option>
+          </select>
+
+          <label for="details">Project Details</label>
+          <textarea id="details" name="details" rows="4" placeholder="Tell us what you want built"></textarea>
+
+          <button class="btn" type="submit">Send Request</button>
+          <p class="helper">Replace Formspree endpoint before production.</p>
+        </form>
+      </div>
+
+      <div class="form">
+        <h2>Direct Contact</h2>
+        <p><strong>Phone:</strong> <a href="tel:9088949903">(908) 894-9903</a></p>
+        <p><strong>Email:</strong> Emerylawnservices@gmail.com</p>
+        <p class="helper">Hours: Mon–Sat · 8:00 AM – 6:00 PM</p>
+        <div class="cta-row" style="margin-top:10px">
+          <a class="btn" href="./services.html">View Services</a>
+          <a class="btn ghost" href="./gallery.html">View Gallery</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
