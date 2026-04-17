@@ -27,7 +27,7 @@ jobs:
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: ./.output/public
 
   deploy:
     environment:
@@ -38,3 +38,4 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
